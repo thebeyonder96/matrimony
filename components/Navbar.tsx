@@ -1,6 +1,7 @@
 "use client";
 import { BASE_URL } from "@/configs/constants";
 import { useAuth } from "@/store/authStore";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -16,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     fetchUser();
-  }, []);
+  }, [fetchUser]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,11 +51,9 @@ const Navbar = () => {
             href={"/profile"}
             className="flex items-center justify-center gap-2"
           >
-            <img
-              className="w-5 h-5 bg-white rounded-full object-cover p-2"
-              src={user.picture}
-              alt=""
-            />
+            <Image className="w-5 h-5 bg-white rounded-full object-cover p-2"
+              src={String(user.picture)}
+              alt="" />
             <p>{user.name}</p>
           </Link>
         ) : (

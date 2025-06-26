@@ -7,17 +7,17 @@ import { useAuth } from "@/store/authStore";
 import React, { useEffect } from "react";
 
 const Home = () => {
-  const {user,fetchUser} = useAuth();
+  const {fetchUser} = useAuth();
 
   useEffect(()=>{
     fetchUser()
-  },[])
+  },[fetchUser])
   return (
     <>
       <Hero />
-      <Banner img="partner.png" />
+      <Banner img="/partner.png" />
       <Why />
-      <Banner img="comingSoon.png" />
+      <Banner img="/comingSoon.png" />
       <Footer />
     </>
   );

@@ -17,7 +17,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          "Where{" "}
+          &ldquo;Where{" "}
           <motion.span 
             className="bg-gradient-to-r from-[#800020] via-[#a0002a] to-[#800020] bg-clip-text text-transparent animate-pulse"
             animate={{ 
@@ -53,7 +53,7 @@ const Hero = () => {
           >
             lives
           </motion.span>{" "}
-          begin anew."
+          begin anew.&rdquo
         </motion.p>
         
         <motion.p 

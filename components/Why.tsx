@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   {
@@ -84,11 +85,16 @@ const Why = () => {
               }}
               transition={{ duration: 0.4 }}
             >
-              <img 
+              {/* <img 
                 src={feature.icon} 
                 alt={feature.alt} 
                 className="w-10 h-10 dark:bg-white rounded-full" 
-              />
+              /> */}
+              <Image src={feature.icon} 
+              width={10}
+              height={10}
+                alt={feature.alt} 
+                className="w-10 h-10 dark:bg-white rounded-full"  />
             </motion.div>
             
             <motion.p 
